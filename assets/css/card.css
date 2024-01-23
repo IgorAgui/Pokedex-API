@@ -1,0 +1,139 @@
+.modalBg {
+    display: none;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .9);
+    animation: active .3s ease-in-out;
+}
+
+@keyframes active {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.card {
+    width: 350px;
+    height: 510px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: slideIn .6s ease-in-out;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.head .name {
+    text-align: left;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 0.5rem;
+    text-transform: capitalize;
+}
+
+.head .hp {
+    text-align: right;
+    font-size: 2rem;
+    font-family: monospace;
+    margin-right: 0.6rem;
+}
+
+.head .hp2 {
+    transform: translateY(2.5px);
+}
+
+.types {
+    margin: 0;
+    padding: 0;
+    margin-left: 0.3rem;
+    margin-top: 0.8rem;
+    list-style: none;
+    display: inline-flex;
+    gap: 0 .5rem;
+    font-family: monospace;
+}
+
+.type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem .1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    filter: saturate(1.8);
+    text-align: center;
+    text-transform: capitalize;
+    box-shadow: 0 0 7px rgba(0, 0, 0, .333);
+    text-shadow: 0 0 5px rgba(0, 0, 0, .333);
+}
+
+.img {
+    margin-top: 0.8rem;
+    background-image: url('/assets/img/pokeball.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img {
+    width: 300px;
+    height: 300px;
+}
+
+.stats {
+    background-color: #fff;
+}
+
+.sta {
+    display: block;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-family: fantasy;
+    text-align: center;
+}
+
+.sta i {
+    color: red;
+}
+
+.fontI {
+    display: block;
+    padding-bottom: 1rem;
+    font-family: monospace;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.iFont {
+    color: red;
+    transform: translateY(2px);
+    padding-right: .5rem;
+}
